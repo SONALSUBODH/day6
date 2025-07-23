@@ -1,5 +1,5 @@
 resource "aws_security_group" "tf_sg" {
-  name        = "tf_sg"
+  name        = "tf_sg6"
   description = "Allow HTTPS to web server"
   vpc_id      = "vpc-05bdcc8880aab85ab"
 
