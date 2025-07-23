@@ -41,11 +41,9 @@ resource "aws_instance" "web" {
 
 
 resource "aws_instance" "demo" {
-  ami           = "ami-0a1235697f4afa8a4"  
-  instance_type = "t2.micro"
+  ami           = "var.ami_id"  
+  instance_type = "var.instance_type"
   security_groups = [aws_security_group.sm_tg.name]
-
-  tags = {
-    Name = "Hellosubodh"
-  }
+  tags = var.instance_tags
+  
 }
